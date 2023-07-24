@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navi {
+    min-width: 100vw;
+    height: 60px;
+    /* background: linear-gradient(45deg,#d2001a,#7462ff,#f48e21,#23d5ab); */
+}
+
+#navi ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+#navi ul a {
+    display: flex;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    /* filter: blur(1px); */
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 450px;
+    /* animation: color 12s ease-in-out infinite; */
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.4);
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+/* @keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+} */
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 10px;
+}
+
+.Temperature-icon {
+    font-size: 45px;
+    color: #fff;
+}
+
+h1 {
+    color: #fff;
+    letter-spacing: 1.2px;
+    font-size: 30px;
+}
+
+#celsius,
+#fahrenheit,
+#kelvin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+input {
+    flex: 5;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 8px 0 0 8px;
+    padding: 0 10px;
+}
+
+
+/* for chrome, safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* for Mozila firefox */
+/* input{
+    -moz-appearance: textfield;
+} */
+
+
+.icon {
+    flex: 1;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 30px;
+    background: #4d5964;
+    color: #fff;
+    border-radius: 0 8px 8px 0;
+}
+
+
+.button {
+    margin-top: 25px;
+    text-align: center;
+}
+
+
+.button button {
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button button:hover {
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+    /* background: rgb(187 119 240); */
+    color: #fff;
+}
+
+
+/* reponsive work */
+@media only screen and (min-width: 375px) and (max-width: 433px) {
+    #temp {
+        display: none;
+    }
+
+    .title {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+    #temp {
+        display: none;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .container {
+        display: block;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #temp {
+        display: none;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .container {
+        display: block;
+        margin: auto;
+    }
+}
